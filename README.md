@@ -3,29 +3,13 @@
 
 By reading this you will be able to setup RISC V Toolchain in Ubuntu 22.04
 
-
-
 ## Table of contents
 
  - Prerequisites
  - ToolChain setup 
  - sanity checks
  - uniqueness test
-## Prerequisites
- - A 64-bit Ubuntu 22.04     LTS environment.
 
- - For Windows users: Use Oracle VirtualBox with Ubuntu 22.04 LTS (2 vCPUs, 4-8 GB RAM, 30 GB disk).
-
- - Run the following command once to update your package lists before starting the tasks:
- 
-sudo apt-get update
-
-## Table of contents
-
- - Prerequisites
- - ToolChain setup 
- - sanity checks
- - uniqueness test
 ## Prerequisites
  - A 64-bit Ubuntu 22.04     LTS environment.
 
@@ -37,6 +21,9 @@ sudo apt-get update
 ```
 ## Step 1
 __Install base developer tool__
+
+These tools are essential build prerequisites for compilers, linkers, autotools, and libraries required by the RISC-V simulator, proxy kernel, and other tooling. GTKWave is included for waveform viewing.
+
 ```bash
 sudo apt-get install -y git vim autoconf automake autotools-dev curl \
 libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex \
@@ -44,6 +31,8 @@ texinfo gperf libtool patchutils bc zlib1g-dev libexpat1-dev gtkwave
 ```
 ## Step 2
 __Creating a workspace__
+
+Deficated library for RISC-V
 ```bash
 cd
 pwd=$PWD
@@ -58,16 +47,25 @@ tar -xvzf riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14.tar.gz
 ```
 ## Step 4
 __Add ToolChain to path__
+
+We can use riscv64-unknown-elf-gcc and related binaries without typing their full paths, both immediately and in future terminal sessions.
+
 ```bash
 echo 'export PATH="$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 ```
 ## Step 5
 __Installing device tree compiler__
+
+DTC is a common dependency in SoC/simulator flows and is expected by some RISC-V components.
+
 ```bash
 sudo apt-get install -y device-tree-compiler
 ```
 ## Step 6
+
+Spike is the reference RISC-V ISA simulator, used to validate the correctness of your compiled RISC-V ELF programs.
+
 __Build and Install Spike__
 ```bash
 cd $(pwd)/riscv_toolchain
@@ -79,6 +77,9 @@ make -j$(nproc)
 sudo make install
 ```
 ## Step 7
+
+The proxy kernel (pk) provides a minimal runtime environment, allowing you to execute newlib ELF binaries under Spike using spike pk ./your_prog. It bridges your compiled program to the simulator.
+
 __Build and Install RISC-V Proxy Kernel__
 ```bash
 git clone https://github.com/riscv/riscv-pk.git
@@ -92,6 +93,9 @@ cd $pwd/riscv_toolchain
 ```
 ## Step 8
 __ Ensure Cross Bin Directory is in path__
+
+pk and other related utilities, which might be installed in a nested riscv64-unknown-elf/bin directory, are correctly found by your shell
+
 ```bash
 echo 'export PATH="$HOME/riscv_toolchain/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin:$PATH"' >> ~/.bashrc
 echo 'export PATH="$HOME/riscv_toolchain/riscv-isa-sim/build:$PATH"' >> ~/.bashrc
@@ -172,10 +176,17 @@ __Run__
 ```bash
 spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
 ```
+__Unique Test output__
 ![unique test](IMG-20250802-WA0004.jpg)
+__list of directory__
 ![2](IMG-20250802-WA0005.jpg)
+__sanity checks__
 ![3](IMG-20250802-WA0003.jpg)
 ![4](IMG-20250802-WA0006.jpg)
 ![5](IMG-20250802-WA0008.jpg)
+
+## Error might be encountered 
+ - Mismatch between version of spike and risc v degrade the version of spike
+ - Dont run a command twice otherwise error in path will occure.
 
 
