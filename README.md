@@ -163,4 +163,4 @@ __Run__
 ```bash
 spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
 ```
-![1](IMG-20250802-WA0003.jpg)
+![unique test](IMG-20250802-WA0004.jpg)
