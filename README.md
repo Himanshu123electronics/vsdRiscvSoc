@@ -110,6 +110,15 @@ chmod +x autoconf.sh
 ./autoconf.sh
 ./configure
 ```
+## Quick sanity checks
+Confirms the toolchain and simulator are visible and runnable from your terminal.
+```bash
+which riscv64-unknown-elf-gcc
+riscv64-unknown-elf-gcc -v
+which spike
+spike --version || spike -h
+which pk
+```
 ## Step 10
 __Uniqueness Test__
 ```bash
@@ -167,5 +176,6 @@ spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
 ![2](IMG-20250802-WA0005.jpg)
 ![3](IMG-20250802-WA0003.jpg)
 ![4](IMG-20250802-WA0006.jpg)
+![5](IMG-20250802-WA0008.jpg)
 
 
