@@ -186,7 +186,9 @@ __sanity checks__
 ![5](IMG-20250802-WA0008.jpg)
 
 ## Error might be encountered 
- - Mismatch between version of spike and risc v degrade the version of spike
+ - Mismatch between version of spike and risc v degrade the version of spike.
+ - Above script has degraded version of spike
  - Dont run a command twice otherwise error in path will occure.
+ - Path error after step 7 __solve__ it by running first command of step8 then run step 7.
 
 
