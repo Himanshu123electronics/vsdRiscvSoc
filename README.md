@@ -32,7 +32,7 @@ export H=$(hostname -s)
 export M=$(cat /etc/machine-id | head -c 16)
 export T=$(date -u +%Y-%m-%dT%H:%M:%SZ)
 export E=$(date +%s)
-
+```
 # output
 Using built-in specs.
 COLLECT_GCC=riscv64-unknown-elf-gcc
@@ -42,7 +42,6 @@ Configured with: /scratch/carsteng/freedom-tools-master/obj/x86_64-linux-ubuntu1
 Thread model: single
 __gcc version 8.3.0 (SiFive GCC 8.3.0-2019.08.0)__ 
 
-```
 
 ### Program List
 - Each program contains unique as header.
