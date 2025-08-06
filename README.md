@@ -27,12 +27,12 @@ This repository demonstrates a working RISC-V toolchain by compiling and executi
   ```
 - Shell scripting: For setting environment variables and embedding unique IDs.
 - ```bash
-     export U=$(id -un)
+  export U=$(id -un)
 export H=$(hostname -s)
 export M=$(cat /etc/machine-id | head -c 16)
 export T=$(date -u +%Y-%m-%dT%H:%M:%SZ)
-export E=$(date +%s)
-```
+export E=$(date +%s)```
+
 # output
 Using built-in specs.
 COLLECT_GCC=riscv64-unknown-elf-gcc
