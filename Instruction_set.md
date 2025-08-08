@@ -1,3 +1,5 @@
+## Factorial
+
 | Instruction | Type | Opcode | rd | funct3 | rs1 | rs2 | funct7 | Binary Immediate | Description |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | `addi sp, sp, -64` | I-Type | `0010011` | `x2` | `000` | `x2` | N/A | N/A | `111111000000` | $x2 = x2 + (-64)$ |
@@ -6,6 +8,7 @@
 | `addi s0, sp, 64` | I-Type | `0010011` | `x8` | `000` | `x2` | N/A | N/A | `000001000000` | $x8 = x2 + 64$ |
 | `lui a5, 0x1d` | U-Type | `0110111` | `x15`| N/A | N/A | N/A | N/A | `00000000000111010000` | $x15 = 0x1d \ll 12$ |
 
+## max_arrays
 
 | Instruction | Type | Opcode | rd | funct3 | rs1 | rs2 | funct7 | Binary Immediate | Description |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
@@ -15,6 +18,7 @@
 | `addi s0, sp, 64` | I-Type | `0010011` | `x8` | `000` | `x2` | N/A | N/A | `000001000000` | $x8 = x2 + 64$ |
 | `lui a5, 0x1c` | U-Type | `0110111` | `x15`| N/A | N/A | N/A | N/A | `0000000000011100` | $x15 = 0x1c \ll 12$ |
 
+## bits operation
 | Instruction | Type | Opcode | rd | funct3 | rs1 | rs2 | funct7 | Binary Immediate | Description |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | `addi sp, sp, -32` | I-Type | `0010011` | `x2` | `000` | `x2` | N/A | N/A | `11111100000` | $x2 = x2 + (-32)$ |
@@ -23,6 +27,7 @@
 | `addi s0, sp, 32` | I-Type | `0010011` | `x8` | `000` | `x2` | N/A | N/A | `000000100000` | $x8 = x2 + 32$ |
 | `lui a5, 0x1c` | U-Type | `0110111` | `x15`| N/A | N/A | N/A | N/A | `0000000000011100` | $x15 = 0x1c \ll 12$ |
 
+## bubble_sort
 | Instruction | Type | Opcode | rd | funct3 | rs1 | rs2 | funct7 | Binary Immediate | Description |
 |:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
 | `jal ra, 101ce` | J-Type | `1101111` | `x1` | N/A | N/A | N/A | N/A | `11011100010111111111` | $ra = pc + 4; pc = pc - 0x23c$ |
