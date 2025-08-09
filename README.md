@@ -127,6 +127,47 @@ static void uniq_print_header(const char *program_name) {
 4. **bubble_sort.c** – Sorts an array using bubble sort.
 
 ---
+
+
+## Compile factorial.c
+
+```bash
+riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+factorial.c -o factorial
+```
+
+
+## Compile max_array.c
+
+```bash
+riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+array.c -o array
+```
+
+
+## Compile bitops.c
+
+```bash
+riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+bitops.c -o bitops
+```
+
+
+## Compile bubble_sort.c
+
+```bash
+riscv64-unknown-elf-gcc -O0 -g -march=rv64imac -mabi=lp64 \
+-DUSERNAME="\"$U\"" -DHOSTNAME="\"$H\"" -DMACHINE_ID="\"$M\"" \
+-DBUILD_UTC="\"$T\"" -DBUILD_EPOCH=$E \
+bubble_sort.c -o bubble_sort
+```
+
  ## Run factorial.c
 
 ```bash
