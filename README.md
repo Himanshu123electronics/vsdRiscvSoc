@@ -148,7 +148,7 @@ spike ~/riscv_toolchain/riscv-pk/build/pk ./bitops
 ```
 
 
-## Run buubble_sort.c
+## Run bubble_sort.c
 
 ```bash
 spike ~/riscv_toolchain/riscv-pk/build/pk ./bubble_sort
