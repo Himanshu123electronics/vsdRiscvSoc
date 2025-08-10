@@ -179,7 +179,7 @@ spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
 __Unique Test output__
 ![unique test](unique_test_output.jpg)
 __list of directory__
-![2](list_of_files_in_toolcahain.jpg)
+![2](list_of_files_in_toolchain.jpg)
 __sanity checks__
 ![3](sanity_checks.jpg)
 ![4](verify_gcc_installation.jpg)
