@@ -36,7 +36,7 @@ gcc version 8.3.0 (SiFive GCC 8.3.0-2019.08.0)
   spike --help
   ```
   # output
-  [!spike version](spike_version.png)
+  ![spike version](spike_version.png)
    
   
 - Shell scripting: For setting environment variables and embedding unique IDs.
