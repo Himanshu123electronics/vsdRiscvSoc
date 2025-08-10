@@ -175,55 +175,55 @@ bubble_sort.c -o bubble_sort
 ```bash
 spike ~/riscv_toolchain/riscv-pk/build/pk ./factorial
 ```
-[!factorial](factorial_output.png)
+![factorial](factorial_output.png)
 
 ## Run max_array.c
 
 ```bash
 spike ~/riscv_toolchain/riscv-pk/build/pk ./array
 ```
-[!max_array](array_output.png)
+![max_array](array_output.png)
 
 ## Run bitops.c
 
 ```bash
 spike ~/riscv_toolchain/riscv-pk/build/pk ./bitops
 ```
-[!bitops](bitops_output.png)
+![bitops](bitops_output.png)
 
 ## Run bubble_sort.c
 
 ```bash
 spike ~/riscv_toolchain/riscv-pk/build/pk ./bubble_sort
 ```
-[!buuble_sort](bubble_sort_output.png)
+![buuble_sort](bubble_sort_output.png)
 ## Assemble factorial.s
 
 ```bash
 riscv64-unknown-elf-gcc -O0 -S factorial.c -o factorial.s
 ```
-[!assm_factorial](factorial_assm.png)
+![assm_factorial](factorial_assm.png)
 
 ## Assemble array.s
 
 ```bash
 riscv64-unknown-elf-gcc -O0 -S max_array.c -o array.s
 ```
-[!assm_array](array_assm.png)
+![assm_array](array_assm.png)
 
 ## Assemble bitops.s
 
 ```bash
 riscv64-unknown-elf-gcc -O0 -S bitops.c -o bitops.s
 ```
-[!assm_bitops](bitops_assm.png)
+![assm_bitops](bitops_assm.png)
 
 ## Assemble bubble_sort.s
 
 ```bash
 riscv64-unknown-elf-gcc -O0 -S bubble_sort.c -o bubble_sort.s
 ```
-[!assm_bubblesort](bubblesort_assm.png)
+![assm_bubblesort](bubblesort_assm.png)
 
 
 ## Disassembly of factorial
