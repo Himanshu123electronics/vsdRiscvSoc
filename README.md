@@ -177,18 +177,19 @@ __Run__
 spike ~/riscv_toolchain/riscv-pk/build/pk ./unique_test
 ```
 __Unique Test output__
-![unique test](IMG-20250802-WA0004.jpg)
+![unique test](unique_test_output.jpg)
 __list of directory__
-![2](IMG-20250802-WA0005.jpg)
+![2](list_of_files_in_toolcahain.jpg)
 __sanity checks__
-![3](IMG-20250802-WA0003.jpg)
-![4](IMG-20250802-WA0006.jpg)
-![5](IMG-20250802-WA0008.jpg)
+![3](sanity_checks.jpg)
+![4](verify_gcc_installation.jpg)
+![5](verify_pk_and_spike.jpg)
 
 ## Error might be encountered 
  - Mismatch between version of spike and risc v degrade the version of spike.
  - Above script has degraded version of spike
  - Dont run a command twice otherwise error in path will occure.
  - Path error after step 7 __solve__ it by running first command of step8 then run step 7.
+ - Above scirpts might not work in macbook as it has aarch64 processor
 
 
